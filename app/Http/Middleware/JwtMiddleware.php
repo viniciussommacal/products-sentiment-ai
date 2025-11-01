@@ -20,9 +20,10 @@ class JwtMiddleware
         try {
             $user = JWTAuth::parseToken()->authenticate();
         } catch (JWTException $exception) {
-            return response()->json(['error' => 'Token not valid'], 401);
+            return response()->json(['error' => 'Token not valid'], RESPONSE::HTTP_UNAUTHORIZED);
         }
 
         return $next($request);
     }
 }
+

@@ -6,9 +6,8 @@ use App\Models\User;
 
 class UserRepository
 {
-    public function store($data)
+    public function save($data)
     {
         return User::create($data);
     }
-
 }

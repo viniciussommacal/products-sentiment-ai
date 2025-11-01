@@ -18,7 +18,8 @@ class AuthService
     public function storeUser($data)
     {
         $data['password'] = Hash::make($data['password']);
-        $user = $this->userRepository->store($data);
+
+        $user = $this->userRepository->save($data);
         $token = JWTAuth::fromUser($user);
         return $token;
     }
