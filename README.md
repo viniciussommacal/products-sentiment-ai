@@ -1,6 +1,6 @@
-# 💬 API de Análise de Sentimento 🤖
+# 💬 API de Análise de Avaliações 🤖
 
-Uma **API REST** desenvolvida em **Laravel** que gerencia avaliações de produtos com **análise automática de sentimentos** usando **OpenAI**.
+Uma **API REST** desenvolvida em **Laravel** que gerencia avaliações de produtos com **análise automática de avaliações** usando **OpenAI**.
 
 ---
 
@@ -45,7 +45,7 @@ Este sistema permite que **usuários gerenciem produtos e avaliações**, com um
 O sistema utiliza um **job em background (`ProcessReviewJob`)** que:  
 1️⃣ Captura novas avaliações  
 2️⃣ Envia o comentário para a **API da OpenAI**  
-3️⃣ Analisa o sentimento  
+3️⃣ Analisa o sentimento do comentário e gera uma classificação
 4️⃣ Atualiza a avaliação com uma **classificação automatizada**  
 
 A integração com **OpenAI** utiliza **GPT-3.5-turbo** para analisar o contexto do comentário e determinar o **nível de satisfação do cliente** 💭.
